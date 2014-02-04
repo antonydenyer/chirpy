@@ -1,6 +1,4 @@
 ﻿using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Chirpy.App.Model;
 using Chirpy.App.QueryHandlers;
 using Chirpy.App.Repository;
