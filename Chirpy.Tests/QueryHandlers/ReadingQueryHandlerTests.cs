@@ -19,7 +19,7 @@ namespace Chirpy.Tests.QueryHandlers
             public void setup()
             {
                 _postings = new PostingRepository();
-                _postings.Add(new Posting("posting: alice -> any old message"));
+                _postings.Add(new Posting("alice","any old message"));
                 _readingQueryHandler = new ReadingQueryHandler(_postings);
             }
 

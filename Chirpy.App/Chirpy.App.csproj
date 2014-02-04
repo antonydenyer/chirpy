@@ -46,12 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandlers\FollowingCommandHandler.cs" />
     <Compile Include="CommandHandlers\ICommandHandler.cs" />
-    <Compile Include="Model\Reading.cs" />
+    <Compile Include="Model\Following.cs" />
+    <Compile Include="Model\FollowingCommand.cs" />
+    <Compile Include="Model\ReadingQuery.cs" />
     <Compile Include="QueryHandlers\IQueryHandler.cs" />
     <Compile Include="QueryHandlers\ReadingQueryHandler.cs" />
-    <Compile Include="Model\Posting.cs" />
+    <Compile Include="Model\PostingCommand.cs" />
     <Compile Include="CommandHandlers\PostingCommandHandler.cs" />
+    <Compile Include="Repository\FollowingRepository.cs" />
     <Compile Include="Repository\PostingRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

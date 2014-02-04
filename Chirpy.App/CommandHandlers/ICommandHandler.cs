@@ -1,6 +1,6 @@
 ﻿namespace Chirpy.App.CommandHandlers
 {
-    internal interface ICommandHandler
+    public interface ICommandHandler
     {
         void Handle(string message);
     }

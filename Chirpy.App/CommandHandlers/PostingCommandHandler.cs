@@ -18,9 +18,9 @@ namespace Chirpy.App.CommandHandlers
             if (!message.StartsWith("posting", StringComparison.InvariantCultureIgnoreCase))
                 return;
 
-            var command = new Posting(message);
+            var command = new PostingCommand(message);
 
-            _postings.Add(command);
+            _postings.Add(command.Posting);
         }
     }
 }

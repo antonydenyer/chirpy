@@ -2,9 +2,9 @@
 
 namespace Chirpy.App.Model
 {
-    public class Reading
+    public class ReadingQuery
     {
-        public Reading(string message)
+        public ReadingQuery(string message)
         {
             var colon = message.IndexOf(":", StringComparison.InvariantCultureIgnoreCase);
             User = message.Substring(colon + 1).Trim();

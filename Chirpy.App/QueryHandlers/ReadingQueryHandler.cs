@@ -20,7 +20,7 @@ namespace Chirpy.App.QueryHandlers
             if (!message.StartsWith("reading", StringComparison.InvariantCultureIgnoreCase))
                 return new string []{};
 
-            var query = new Reading(message);
+            var query = new ReadingQuery(message);
             return _repository
                 .GetPostingsFor(query.User)
                 .Select(x => string.Format("{0} - {1}", x.Timestamp, x.Message));

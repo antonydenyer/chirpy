@@ -2,14 +2,14 @@
 using NUnit.Framework;
 using Should;
 
-namespace Chirpy.Tests.QueryHandlers
+namespace Chirpy.Tests.Model
 {
     public class ReadingQueryTests
     {
         [TestFixture]
         public class when_parsing_valid_reading_query
         {
-            readonly Reading query = new Reading("reading: alice");
+            readonly ReadingQuery query = new ReadingQuery("reading: alice");
 
             [Test]
             public void parses_the_message()

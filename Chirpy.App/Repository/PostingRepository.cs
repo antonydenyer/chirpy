@@ -18,9 +18,9 @@ namespace Chirpy.App.Repository
             return _postings.Where(x => x.User == user);
         }
 
-        public void Add(Posting command)
+        public void Add(Posting posting)
         {
-            _postings.Add(command);
+            _postings.Add(posting);
         }
     }
 }
