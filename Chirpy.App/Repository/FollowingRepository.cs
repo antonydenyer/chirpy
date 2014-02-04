@@ -13,14 +13,14 @@ namespace Chirpy.App.Repository
             get { return _followers.Count; }
         }
 
-        public IEnumerable<string> GetWhoUserFollows(string user)
+        public IEnumerable<string> GetUsersIFollow(string user)
         {
             return _followers.Where(x => x.User == user).Select(x => x.Follows);
         }
 
         public void Add(Following following)
         {
-            if (!GetWhoUserFollows(following.User).Contains(following.Follows))
+            if (!GetUsersIFollow(following.User).Contains(following.Follows))
             {
                 _followers.Add(following);
             }

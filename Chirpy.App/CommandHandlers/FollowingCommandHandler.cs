@@ -6,11 +6,11 @@ namespace Chirpy.App.CommandHandlers
 {
     public class FollowingCommandHandler : ICommandHandler
     {
-        private readonly FollowingRepository _followers;
+        private readonly FollowingRepository _followingRepository;
 
-        public FollowingCommandHandler(FollowingRepository followers)
+        public FollowingCommandHandler(FollowingRepository followingRepository)
         {
-            _followers = followers;
+            _followingRepository = followingRepository;
         }
 
         public void Handle(string message)
@@ -20,7 +20,7 @@ namespace Chirpy.App.CommandHandlers
 
             var command = new FollowingCommand(message);
 
-            _followers.Add(command.Following);
+            _followingRepository.Add(command.Following);
         }
     }
 }

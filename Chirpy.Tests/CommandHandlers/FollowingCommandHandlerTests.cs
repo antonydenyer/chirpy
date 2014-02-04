@@ -26,7 +26,7 @@ namespace Chirpy.Tests.CommandHandlers
             {
                 _followingCommandHandler.Handle("following: alice follows rabbit");
                 _followers.Count.ShouldEqual(1);
-                _followers.GetWhoUserFollows("alice").First().ShouldEqual("rabbit");
+                _followers.GetUsersIFollow("alice").First().ShouldEqual("rabbit");
             }
 
             [Test]
@@ -36,8 +36,8 @@ namespace Chirpy.Tests.CommandHandlers
                 _followingCommandHandler.Handle("following: alice follows rabbit");
                 _followingCommandHandler.Handle("following: rabbit follows alice");
                 _followers.Count.ShouldEqual(2);
-                _followers.GetWhoUserFollows("alice").First().ShouldEqual("rabbit");
-                _followers.GetWhoUserFollows("rabbit").First().ShouldEqual("alice");
+                _followers.GetUsersIFollow("alice").First().ShouldEqual("rabbit");
+                _followers.GetUsersIFollow("rabbit").First().ShouldEqual("alice");
             }
         }
     }

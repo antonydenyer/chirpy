@@ -18,6 +18,11 @@ namespace Chirpy.App.Repository
             return _postings.Where(x => x.User == user);
         }
 
+        public IEnumerable<Posting> GetPostingsFor(IEnumerable<string> following)
+        {
+            return _postings.Where(x => following.Contains(x.User));
+        }
+
         public void Add(Posting posting)
         {
             _postings.Add(posting);

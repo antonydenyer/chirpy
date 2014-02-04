@@ -30,5 +30,6 @@ namespace Chirpy.App.Model
         public DateTime Timestamp { get; private set; }
         public string User { get; private set; }
         public string Message { get; private set; }
+
     }
 }

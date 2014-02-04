@@ -23,7 +23,7 @@ namespace Chirpy.App.QueryHandlers
             var query = new ReadingQuery(message);
             return _repository
                 .GetPostingsFor(query.User)
-                .Select(x => string.Format("{0} - {1}", x.Timestamp, x.Message));
+                .Select(x => string.Format("{0} ({1})", x.Message, x.Timestamp));
             ;
         }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Chirpy.App.QueryHandlers
 {
-    internal interface IQueryHandler
+    public interface IQueryHandler
     {
         IEnumerable<string> Handle(string message);
     }

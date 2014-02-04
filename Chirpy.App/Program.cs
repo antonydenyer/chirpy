@@ -11,15 +11,19 @@ namespace Chirpy.App
     {
         static void Main(string[] args)
         {
-            var repository = new PostingRepository();
+            var postingRepository = new PostingRepository();
+            var followingRepository = new FollowingRepository();
+
             var commandHandlers = new List<ICommandHandler>
                 {
-                    new PostingCommandHandler(repository)
+                    new PostingCommandHandler(postingRepository),
+                    new FollowingCommandHandler(followingRepository)
                 };
 
             var queryHandlers = new List<IQueryHandler>
                 {
-                    new ReadingQueryHandler(repository)
+                    new ReadingQueryHandler(postingRepository),
+                    new WallQueryHandler(postingRepository, followingRepository)
                 };
 
             string input;

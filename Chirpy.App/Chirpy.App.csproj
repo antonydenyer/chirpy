@@ -51,10 +51,12 @@
     <Compile Include="Model\Following.cs" />
     <Compile Include="Model\FollowingCommand.cs" />
     <Compile Include="Model\ReadingQuery.cs" />
+    <Compile Include="Model\WallQuery.cs" />
     <Compile Include="QueryHandlers\IQueryHandler.cs" />
     <Compile Include="QueryHandlers\ReadingQueryHandler.cs" />
     <Compile Include="Model\PostingCommand.cs" />
     <Compile Include="CommandHandlers\PostingCommandHandler.cs" />
+    <Compile Include="QueryHandlers\WallQueryHandler.cs" />
     <Compile Include="Repository\FollowingRepository.cs" />
     <Compile Include="Repository\PostingRepository.cs" />
     <Compile Include="Program.cs" />
