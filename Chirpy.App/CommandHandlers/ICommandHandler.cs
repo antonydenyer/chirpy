@@ -1,4 +1,4 @@
-﻿namespace Chirpy.App.MessageHandlers
+﻿namespace Chirpy.App.CommandHandlers
 {
     internal interface ICommandHandler
     {

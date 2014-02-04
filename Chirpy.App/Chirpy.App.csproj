@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageHandlers\IMessage.cs" />
-    <Compile Include="MessageHandlers\ICommandHandler.cs" />
-    <Compile Include="Repository\Posting.cs" />
-    <Compile Include="MessageHandlers\PostingCommandHandler.cs" />
+    <Compile Include="CommandHandlers\ICommandHandler.cs" />
+    <Compile Include="Model\Reading.cs" />
+    <Compile Include="QueryHandlers\IQueryHandler.cs" />
+    <Compile Include="QueryHandlers\ReadingQueryHandler.cs" />
+    <Compile Include="Model\Posting.cs" />
+    <Compile Include="CommandHandlers\PostingCommandHandler.cs" />
     <Compile Include="Repository\PostingRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

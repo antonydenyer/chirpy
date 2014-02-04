@@ -1,9 +1,8 @@
 ﻿using System;
-using Chirpy.App.MessageHandlers;
 
-namespace Chirpy.App.Repository
+namespace Chirpy.App.Model
 {
-    public class Posting : IMessage
+    public class Posting
     {
         public Posting(string message)
         {

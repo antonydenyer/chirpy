@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Chirpy.App.MessageHandlers;
+using Chirpy.App.CommandHandlers;
+using Chirpy.App.QueryHandlers;
 using Chirpy.App.Repository;
+using MoreLinq;
 
 namespace Chirpy.App
 {
@@ -12,18 +11,24 @@ namespace Chirpy.App
     {
         static void Main(string[] args)
         {
-            var repo = new PostingRepository();
+            var repository = new PostingRepository();
             var commandHandlers = new List<ICommandHandler>
                 {
-                    new PostingCommandHandler(repo)
+                    new PostingCommandHandler(repository)
                 };
 
-            string input; 
+            var queryHandlers = new List<IQueryHandler>
+                {
+                    new ReadingQueryHandler(repository)
+                };
+
+            string input;
             do
             {
                 Console.Write("$");
-                input = Console.ReadLine(); 
-                commandHandlers.ForEach(x=>x.Handle(input));
+                input = Console.ReadLine();
+                commandHandlers.ForEach(x => x.Handle(input));
+                queryHandlers.ForEach(x => x.Handle(input).ForEach(Console.WriteLine));
 
             } while (input != "exit");
 

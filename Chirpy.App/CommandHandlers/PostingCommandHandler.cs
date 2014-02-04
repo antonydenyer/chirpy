@@ -1,7 +1,8 @@
 ﻿using System;
+using Chirpy.App.Model;
 using Chirpy.App.Repository;
 
-namespace Chirpy.App.MessageHandlers
+namespace Chirpy.App.CommandHandlers
 {
     public class PostingCommandHandler : ICommandHandler
     {

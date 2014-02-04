@@ -1,8 +1,9 @@
-﻿using Chirpy.App.Repository;
+﻿using Chirpy.App.Model;
+using Chirpy.App.Repository;
 using NUnit.Framework;
 using Should;
 
-namespace Chirpy.Tests
+namespace Chirpy.Tests.CommandHandlers
 {
     public class PostingCommandTests
     {
