@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirpy.App", "Chirpy.App\Chirpy.App.csproj", "{E84E2F97-DA96-466F-B0E5-F7640D4288EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirpy.Tests", "Chirpy.Tests\Chirpy.Tests.csproj", "{A39A8026-00BA-4643-8520-E0513603A912}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E84E2F97-DA96-466F-B0E5-F7640D4288EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E84E2F97-DA96-466F-B0E5-F7640D4288EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E84E2F97-DA96-466F-B0E5-F7640D4288EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E84E2F97-DA96-466F-B0E5-F7640D4288EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39A8026-00BA-4643-8520-E0513603A912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39A8026-00BA-4643-8520-E0513603A912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39A8026-00BA-4643-8520-E0513603A912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39A8026-00BA-4643-8520-E0513603A912}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
