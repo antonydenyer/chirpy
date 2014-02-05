@@ -4,5 +4,5 @@ Runs on mono 2.10
 ``` sh
   git clone https://github.com/antonydenyer/chirpy.git
   xbuild
-  Chirpy.App/bin/Debug/Chirpy.App.exe
+  mono Chirpy.App/bin/Debug/Chirpy.App.exe
 ```
