@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Chirpy.App.Model;
 using Chirpy.App.Repository;
+using NTimeAgo;
 
 namespace Chirpy.App.QueryHandlers
 {
@@ -23,7 +24,7 @@ namespace Chirpy.App.QueryHandlers
             var query = new ReadingQuery(message);
             return _repository
                 .GetPostingsFor(query.User)
-                .Select(x => string.Format("{0} ({1})", x.Message, x.Timestamp));
+                .Select(x => string.Format("{0} ({1})", x.Message, x.Timestamp.InWords()));
             ;
         }
     }

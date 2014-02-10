@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Chirpy.App.Model;
 using Chirpy.App.Repository;
+using NTimeAgo;
 
 namespace Chirpy.App.QueryHandlers
 {
@@ -27,7 +28,7 @@ namespace Chirpy.App.QueryHandlers
             var following = _followingRepository.GetUsersIFollow(query.User);
             return _postingRepository
                 .GetPostingsFor(following)
-                .Select(x => string.Format("{0} - {1} ({2})",x.User, x.Message, x.Timestamp));
+                .Select(x => string.Format("{0} - {1} ({2})",x.User, x.Message, x.Timestamp.InWords()));
 
         }
     }
